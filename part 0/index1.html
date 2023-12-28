@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.5.0/Sortable.min.js"></script>
+    <title>App-Marketplace</title>
+    <style>
+        body{
+            font-family: 'Roboto', monospace;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-top: 20px;color: white;
+            background-color: #17141a;
+
+        }
+        .drop_container{
+            background-color: rgba(32,32,32);
+            padding: 60px;
+            border-radius: 0.5em;
+            box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.27);
+        }
+        .drop_container{
+            display: grid;
+            gap: 1em;
+        }
+        .drop_card, .drop_content{
+            padding: 10px 50px;
+            width: 300px;
+            justify-content: space-between;
+            background: #292829;
+            border-radius: 3em;
+        }
+        img{
+            height: auto;
+            max-width: 100%;
+        }
+        .drop_img{
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            margin-left: -2.5em;
+        }
+        .about{
+            line-height: .7em;
+            letter-spacing: 1px;
+            margin: -10px 0 0 20px;
+        }
+        h1.name{
+            font-size: 1.2rem;
+            color: #e2b3fc;
+            font-weight: 100;
+
+        }
+        span.profession{
+            font-size: 0.9rem;
+            color: #969596;
+
+        }
+        .sortable-drag{
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="drop_container" id="drop-items">
+        <div class="drop_card">
+            <div class="drop_content">
+                <img src="" alt="">
+                <div class="about">
+                    <h1 class="name">Clay</h1>
+                    <span class="profession">Web developer</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="drop_card">
+            <div class="drop_content">
+                <img src="" alt="">
+                <div class="about">
+                    <h1 class="name">Ajeet</h1>
+                    <span class="profession">Video Editor</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="drop_card">
+            <div class="drop_content">
+                <img src="" alt="">
+                <div class="about">
+                    <h1 class="name">Sara mill</h1>
+                    <span class="profession">Web designer</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="drop_card">
+            <div class="drop_content">
+                <img src="" alt="">
+                <div class="about">
+                    <h1 class="name">Amelia</h1>
+                    <span class="profession">Ui/Ux designer</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+
+
+    <script>
+        const dropItems = document.getElementById('drop-items');
+        new sortable(dropItems, {
+            Animation:350,
+            dragclass:"sortable-drag"
+        });
+    </script>
+    
+</body>
+</html>

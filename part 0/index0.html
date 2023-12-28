@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App-Ghar Hai</title>
+    <style>
+        body{
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(135deg,#1abc9c 0%,#8e44ad 100% ) no-repeat center center fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes float{
+            0%{
+                box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+                transform:translateY(0px)
+            }
+            50%{
+                box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+                transform:translateY(-20px)
+            }
+            100%{
+                box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+                transform:translateY(0px)
+            }
+        }
+        .avatar{
+            width: 150px;
+            height: 150px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+            transform: translateY(0px);
+            animation: float 6s ease-in-out infinite;
+        }
+        .avatar img{
+            width: 100%;
+            height: auto;
+        }
+        /* Hover Me */
+        button{
+            position: absolute;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            text-align: center;
+            color: #3331;
+            padding: 20px 20px 20px 120px;
+            background: transparent;
+            border: 0;
+        }
+        button:hover  .top{
+            background: #FFE600;
+
+        }
+        button:hover  .middle{
+            background: #CCFF00;
+            color: #000;
+        }
+        button:hover  .bottom{
+            background: #FAFF00;
+
+        }
+        button .top , button .bottom {
+            position: absolute;
+            width: 100%;
+            height: 120%;
+            z-index: 1;
+        }
+        button span {
+            border-radius: 75px 0 75px 0;
+            transition: all 0.5s ease-in-out;
+        }
+        button .top{
+            left: -6px;
+            top: -6px;
+            background: #CCFF00;
+        }
+        button .middle{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            padding-top: 10px;background: #FAFF00;
+            box-shadow: 0px 1px 4px rgba(0,0,0,0.25);
+        }
+        button .bottom{
+            left: 5px;
+            top: 10px;
+            background: #FFE600;
+
+        }
+        input{
+            float: left;
+        }
+        input[type="checkbox"]{
+            /* accent-color: #FAFF00; */
+            accent-color: #face8d;
+
+        }
+        /* NAVBAR CSS PROPERTY */
+        nav, ul{
+            display: flex;
+            margin-top: -14rem;
+            text-decoration: none;
+            margin-left: -15rem;
+            
+        }
+        li, a{
+            text-decoration: none;
+            padding-left: 0.71rem;
+            padding-right: 0.71rem;
+
+            list-style: none;
+            color: #7c4c4c71;
+            color: rgb(231, 227, 227);
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            padding-bottom: -100px;
+
+
+        }
+        li:hover{
+            background: linear-gradient(135deg,#1fb698 0%,#9d46c3 100% ) no-repeat center center fixed;
+            border: 1.5px solid silver;
+            padding-bottom: -145px;
+        }
+        p{
+            margin-top: -14rem;
+            margin-left: 45px;
+            padding-left: 45px;
+            font-size: 18px;
+            color: rgb(231, 227, 227);
+
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+  
+<nav>
+    <ul>
+        <li><a href="">ZOOMEYE</a></li>
+        <li><a href="">WIGLE</a></li>
+        <li><a href="">HUNTER.IO</a></li>
+        <li><a href="">SHODAN</a></li>
+    </ul>
+<p><input type="checkbox"> The accent-color CSS Property</p>
+
+</nav>
+</header>
+
+    <div class="container">
+        <div class="avatar">
+         <img src="images (1).jpg" alt="avatar">
+        </div>
+
+
+        <div class="container-flex">
+            <button>
+                <span class="top"></span>
+                <span class="middle">Hover Me</span>
+                <span class="bottom"></span>
+            </button>
+        </div>
+     </div>
+</body>
+</html>
