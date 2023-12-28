@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax tutorials</title>
+    <style>
+      #ajax {
+        display: inline;
+        left: 58px;
+        text-align: centre;
+        color: cyan;
+        background-color: rgb(28, 24, 24);
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      button {
+        position: relative;
+        top: 0px;
+        cursor: pointer;
+        float: left;
+      }
+      #fetchbtn,
+      #linkbtn {
+        color: rgb(9, 247, 247);
+        background-color: darkslategrey;
+        border-radius: 6px;
+        text-decoration: none;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        width: 100px;
+        height: 45px;
+        width: 100px;
+        height: 45px;
+      }
+      #popbtn {
+        border-radius: 6px;
+        color: rgb(9, 247, 247);
+
+        background-color: darkslategrey;
+        width: 140px;
+        height: 45px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="ajax">AJAX (Asynchronous Javascript & XML)</h1>
+    <button type="button" class="btn btn-" id="fetchbtn">
+      <!-- onclick="loadAboutInformation()"   use with script tag -->
+
+      Fetch Data
+    </button>
+    <button type="button" class="btn btn-" id="popbtn">PoP-uP Button</button>
+    <button type="button" class="btn btn-link" id="linkbtn">Link</button>
+    <div class="container">
+      <h1>Employee list</h1>
+      <ul id="list"></ul>
+    </div>
+
+    <h1>What is AJAX?</h1>
+    <p>
+      Ajax is amechanism for making partial page updates. it enables you to
+      update sections of a page with data that comes from the server, Avoid full
+      page refresh.
+    </p>
+    <ul id="About-ajax">
+      <li>AJAX stands for asynchronous javascript and XML.</li>
+      <li>
+        AJAX is not a programming language. Rather, it's a set of existing
+        technologies.
+      </li>
+      <li>
+        AJAX helps in fetching data asynchronously without interfering without
+        with the existing page.
+      </li>
+      <li>No page reload / refresh</li>
+      <li>Modern Websites use JSON instead of XML for data transfer.</li>
+    </ul>
+    <h2>Why use Ajax ?</h2>
+    <ul id="uses">
+      <li>No page Reload / Refresh</li>
+      <li>Better User Experience</li>
+      <li>Save Network Bandwidth</li>
+      <li>Very Interactive</li>
+    </ul>
+    <h2>How Ajax Works ?</h2>
+    <ul id="works">
+      <!-- Vanilla javascript is PUre javascript i.e. without importing any libraries in javascript code -->
+      <li>
+        Ajax uses XMLHttpRequest Object(also called XHR Object) to achieve this
+      </li>
+      <li>Modern Websites use JSON instead of XML for data transfer</li>
+      <li>
+        Data can be transferred in any format and protocol(not always https
+        necessary).
+        <ul>
+          <li>(.txt, .html, json, xml but, json is most popular)</li>
+          <li>(can be bring data from any protocols like http, https)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState"
+      >ReadyState code values in xhr</a
+    >
+
+    <ul>
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState"
+        >(click me )</a
+      >
+      <li>0-UNSENT(client has been created but open() not called yet,),</li>
+      <li>1-OPENED(open() has been called ,</li>
+      <li>
+        2-HEADERS_RECEIVED(SEND() Has Been Called, and headers and status are
+        available),
+      </li>
+      <li>3-LOADING(Downloading responseText holds partial data) ,</li>
+      <li>4- DONE( the operation is complete)</li>
+    </ul>
+    <a href="https://jsonplaceholder.typicode.com/">fake JSON data</a>
+
+    <script src="script.js"></script>
+    <script>
+      /*
+      function loadAboutInformation() {
+        alert("loading...");
+
+        // call to ajax
+        //
+        let request = new XMLHttpRequest();
+
+        request.open("GET", "ajaxajax.html");
+
+        request.onreadystatechange = function () {
+          // call whenever State changes
+          if (this.readyState == 4 && this.status == 200) {
+            // complete and successful request
+            console.log(this.responseText);
+            document.getElementById('container').innerHTML=this.responseText
+          }
+        };
+        request.send();
+      }
+   */
+    </script>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: centre;
+    background-color: lightblue;
+}
+.input-container {
+    position: relative;
+}
+.input-container:not(:last-child){
+    margin-bottom: 20px;
+}
+input[type="checkbox"]{
+    /* display: none; */
+}
+.checkbox {
+    cursor: pointer;
+    color:coral;
+    font-size:32px;
+    font-family: arial;
+    font-weight: bold;
+}
+button{
+    
+    border-radius: 5px;
+    border: 1px solid chocolate;
+    color: chartreuse;
+    background-color: darkcyan;
+}
+button:hover{
+    color: black;
+    cursor: pointer;
+}
+nav, a{
+    width: 845px;
+    height: 35px;
+   border-bottom-right-radius: 5px;
+    margin-top: 10px;
+    background-color: black;
+}
+
+div#usr {
+    /* width: 100vw;
+   height: 100vh;  */
+   margin-top: 80px;
+   margin-left: 80px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+#usr{
+   width: 200px;
+   height: 200px;
+   background-image: url(sun.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   border-radius: 100%;
+   position: relative;
+} 
+#usr:before{
+   position: absolute;
+   content: attr(data-name);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   background-color: #5570d9;
+   border-radius: 100%;
+   font-size: 30px;
+   font-weight: 300;
+   color: #fff;
+   font-family: 'Courier New', Courier, monospace;
+   letter-spacing: 3px;
+   transform: rotate(360deg) translate(50%, -30%) scale(0.5);
+   transition: 0.2s letter-spacing ease-in-out,
+               1.6s transform ease-in-out;
+
+
+} 
+#usr:hover::before {
+   background-color: #5570d9b2;
+   letter-spacing: 10px;
+   transform: rotate(0deg) translate(0%) scale(1);
+   transition: 0.6s transform ease-in-out
+               2s letter-spacing ease-in-out;
+} 
+.slow-speed-option {
+    align-items: center;
+    background: var(--google-gray-50);
+    border-radius: 24px/50%;
+    bottom: 0;
+    color: var(--error-code-color);
+    display: inline-flex;
+    font-size: 1em;
+    left: 0;
+    line-height: 1.1em;
+    margin: 5px auto;
+    padding: 2px 12px 3px 20px;
+    position: absolute;
+    right: 0;
+    width: max-content;
+    z-index: 999;
+}
+user agent stylesheet
+label {
+    cursor: default;
+}
+.offline .interstitial-wrapper {
+    color: var(--text-color);
+    font-size: 1em;
+    line-height: 1.55;
+    margin: 0 auto;
+    max-width: 600px;
+    padding-top: 100px;
+    position: relative;
+    width: 100%;
+}
+.interstitial-wrapper {
+    box-sizing: border-box;
+    font-size: 1em;
+    line-height: 1.6em;
+    margin: 14vh auto 0;
+    max-width: 600px;
+    width: 100%;
+}
+style attribute {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 75%;
+}
+body {
+    --background-color: #fff;
+    --error-code-color: var(--google-gray-700);
+    --google-blue-100: rgb(210, 227, 252);
+    --google-blue-300: rgb(138, 180, 248);
+    --google-blue-600: rgb(26, 115, 232);
+    --google-blue-700: rgb(25, 103, 210);
+    --google-gray-100: rgb(241, 243, 244);
+    --google-gray-300: rgb(218, 220, 224);
+    --google-gray-500: rgb(154, 160, 166);
+    --google-gray-50: rgb(248, 249, 250);
+    --google-gray-600: rgb(128, 134, 139);
+    --google-gray-700: rgb(95, 99, 104);
+    --google-gray-800: rgb(60, 64, 67);
+    --google-gray-900: rgb(32, 33, 36);
+    --heading-color: var(--google-gray-900);
+    --link-color: rgb(88, 88, 88);
+    --popup-container-background-color: rgba(0,0,0,.65);
+    --primary-button-fill-color-active: var(--google-blue-700);
+    --primary-button-fill-color: var(--google-blue-600);
+    --primary-button-text-color: #fff;
+    --quiet-background-color: rgb(247, 247, 247);
+    --secondary-button-border-color: var(--google-gray-500);
+    --secondary-button-fill-color: #fff;
+    --secondary-button-hover-border-color: var(--google-gray-600);
+    --secondary-button-hover-fill-color: var(--google-gray-50);
+    --secondary-button-text-color: var(--google-gray-700);
+    --small-link-color: var(--google-gray-700);
+    --text-color: var(--google-gray-700);
+    background: var(--background-color);
+    color: var(--text-color);
+    word-wrap: break-word;
+}
+.slow-speed-option [type=checked] {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+}
+
+.slow-speed-option [type=checkbox]:checked + .slow-speed-toggle::before {
+    background: var(--google-blue-600);
+    opacity: 0.5;
+}
+.slow-speed-option .slow-speed-toggle::before {
+    background: rgb(189,193,198);
+    border-radius: 0.65em;
+    height: 0.9em;
+    width: 2em;
+}
+.slow-speed-option .slow-speed-toggle::before, .slow-speed-option .slow-speed-toggle::after {
+    content: '';
+    display: block;
+    margin: 0 3px;
+    transition: all 100ms cubic-bezier(0.4, 0, 1, 1);
+}
+.slow-speed-option [type=checkbox]:checked + .slow-speed-toggle::after {
+    background: var(--google-blue-600);
+    transform: translate(calc(2em - 90%), -50%);
+}
+.slow-speed-option .slow-speed-toggle::after {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 40%);
+    height: 1.2em;
+    position: absolute;
+    top: 51%;
+    transform: translate(-20%, -50%);
+    width: 1.1em;
+}
+.slow-speed-option .slow-speed-toggle::before, .slow-speed-option .slow-speed-toggle::after {
+    content: '';
+    display: block;
+    margin: 0 3px;
+    transition: all 100ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+.slow-spped-option  {
+    cursor: pointer;
+    margin-inline-start: 8px;
+    padding: 8px 4px;
+    position: relative;
+}
+.slow-speed-toggle::before {
+    background: rgb(189, 193, 198);
+    border-radius: 0.65em;
+    height: 0.9em;
+    width: 2em;
+}
+.slow-speed-toggle::after {
+    content: '';
+    display: block;
+    margin: 0;
+    transition: all 100ms cubic-bezier(0.4,0,1,1);
+}

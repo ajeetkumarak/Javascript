@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event listeners in js</title>
+    <style>
+      .btn {
+        width: 80px;
+        height: 50px;
+        background-color: gold;
+        border-radius: 6px;
+      }
+      .input {
+        border-radius: 6px;
+        color: aqua;
+        background-color: green;
+        position: relative;
+        left: 17px;
+        top: 14px;
+      }
+    </style>
+    <script>
+      function handleBack() {
+        window.history.back();
+      }
+    </script>
+  </head>
+  <body>
+    <div class="btn">
+      <input class="input" type="button" value="back" onclick="handleBack()" />
+    </div>
+    <h1 class="header">Javascript Essentials</h1>
+    <select
+      name="cars"
+      id="carselector"
+      onclick="console.log('you clicked me')"
+    >
+      <option value="volvo">Volvo</option>
+      <option value="saab">saab</option>
+      <option value="maruti">Maruti</option>
+      <option value="audi">Audi</option>
+    </select>
+    <input type="text" name="myfield" />
+    <input type="range" name="numbers" min="0" max="200" />
+    <textarea name="comment" id="" cols="30" rows="10"></textarea>
+    <button>Click me!</button>
+    <div
+      id="beforediv"
+      style="
+        background: yellow;
+        text-align: centre;
+        height: 100px;
+        width: 120px;
+        font-size: 25px;
+      "
+    >
+      <h4>Style me !</h4>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+What is AJAX?
+AJAX stands for asynchronous javascript and XML.
+AJAX is not a programming language. Rather, it's a set of existing technologies.
+AJAX helps in fetching data asynchronously without interfering without with the existing page.
+No page reload / refresh
+Modern Websites use JSON instead of XML for data transfer.
+Why use Ajax ?
+No page Reload / Refresh
+Better User Experience
+Save Network Bandwidth
+Very Interactive
+How Ajax Works ?
+Ajax uses XMLHttpRequest Object(also called XHR Object) to achieve this
+Modern Websites use JSON instead of XML for data transfer
+Data can be transferred in any format and protocol(not always https necessary).
+(.txt, .html, json, xml but, json is most popular)
+(can be bring data from any protocols like http, https)
