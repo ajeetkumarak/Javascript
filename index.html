@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+  </head>
+  <style>
+    h2 {
+      position: relative;
+      font-size: 15rem;
+      font-family: sans-serif;
+      -webkit-text-stroke: 0.3vw #383d52;
+      text-transform: uppercase;
+      padding: 3rem 10rem;
+    }
+    h2::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      color: #4fed51;
+      -webkit-text-stroke: 0vw #383d52;
+      border-right: 2px solid #4fed51;
+      overflow: hidden;
+      animation: animate 6s linear infinite;
+      -webkit-animation: animate 6s linear infinite;
+    }
+    @keyframes animate {
+      0% {
+        width: 0;
+        font-size: 15rem;
+      }
+      70% {
+        width: 100%;
+        font-size: 20rem;
+      }
+      100% {
+        color: red;
+        font-size: 15rem;
+      }
+    }
+    body {
+      background-color: black;
+    }
+    .input-group {
+      position: relative;
+    }
+    input {
+      display: block;
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+      font: inherit;
+    }
+    label {
+      position: absolute;
+      top: -30px;
+      left: -26px;
+      display: inline-flex;
+      column-gap: 10px;
+      align-items: center;
+      transition: transform 0.25s opacity 0.25s;
+    }
+    .icon {
+      display: inline-flex;
+      opacity: 0;
+    }
+    input:focus + label {
+      transform: translateX(26px);
+    }
+    input:focus + label .icon {
+      opacity: 1;
+      transition-delay: 0.1s;
+    }
+    input::placeholder {
+      transition: opacity 0.25s;
+    }
+    input:focus::placeholder {
+      opacity: 0;
+    }
+    /*  
+css code for div of container */
+    /*  
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #2f3640;
+    }
+    #pulse {
+      color: #fff;
+      font-size: 3rem;
+    }
+    .pulse {
+      background: #44bd32;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .pulse::before {
+      content: "";
+      position: absolute;
+      width: calc(100%+40px);
+      height: calc(100%+40px);
+      border: 2px solid #44bd32;
+      border-radius: 50%;
+      animation: animate 1.5s linear infinite;
+    }
+    .pulse::after {
+      content: "";
+      position: absolute;
+      width: calc(100%+40px);
+      height: calc(100%+40px);
+      border: 2px solid #44bd32;
+      border-radius: 50%;
+      animation: animate 1.5s linear infinite;
+      animation-delay: 0.4s;
+    }
+    @keyframes animate {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.4);
+        opacity: 0;
+      }
+    }
+     */
+  </style>
+  <body>
+    <h2 data-text="AniMation">AniMation</h2>
+    <div class="container">
+      <div class="pulse">
+        <!-- <i id="pulse" class="fa fa-phone"> </i> -->
+      </div>
+    </div>
+  </body>
+</html>
